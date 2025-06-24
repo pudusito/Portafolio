@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/Imagenes/fondo.png"); /* Cambia por el nombre correcto */
+  background-size: cover;             /* Asegura que cubra toda la pantalla */
+  background-position: center;        /* Centra la imagen */
+  background-repeat: no-repeat;       /* Evita que se repita */
+  height: 80vh;                      /* Asegura altura completa */
+  font-family: Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  background-attachment: fixed;
+}
+
+#Pudu {
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  transform: translate(-50%, -20%) scaleX(-1);
+  width: 300px;
+  z-index: 10; /* Asegura que esté por encima del canvas */
+ /* border: 1px solid red;*/
+}
+
+.boxchat {
+  /*border: 1px solid red;*/
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: 43%;
+  left:58%;
+  transform: translate(-50%, -20%);
+}
+
+
+
+
+nav ul{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    align-items: center; 
+}
+
+li {
+    padding: 5px;
+}
+
+li a{
+    font-family: 'impact', Courier, serif;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(56, 163, 114);
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.493); /* fondo negro con 20% de opacidad */
+    border-radius: 15px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0); /* fondo negro con 20% de opacidad */
+    padding: 5px;
+}
+
+h1 {
+  margin: 0;          
+  padding: 0;
+  display: inline-block; /* Ajusta al contenido */
+  line-height: 0;        /* Evita espacio vertical */
+  border: none;          /* Solo si no quieres bordes */
+}
+
+h1 img{
+  display: block; /* ✅ Elimina el espacio debajo de la imagen */
+  width: 100%;    /* Escala si quieres que llene el h1 */
+  height: auto;
+/*  border: 1px solid red; */
+}
+
+
+.pudugamediv {
+  width: 514px;
+  height: 650px;
+  /* border: 1px solid red; */
+  line-height: 0; /* elimina espacio vertical invisible */
+  position: absolute;
+  top: 9.2%;                /* Centra verticalmente */
+  right: 0%;               /* Separado del borde derecho */
+  transform: scale(0.8); /* Reduce a la mitad */
+
+  background-color: rgba(0, 0, 0, 0.781);
+}
+
+div p{
+  color:rgb(166, 255, 0);
+}
+
+textarea {
+  border-radius: 20px;
+  border-color: rgba(0, 0, 0, 0);
+  width: 400px;
+  height: 280px;
+  position: relative;
+  top: 35%;
+  left: 8%;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  font-size: 50px;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+
