@@ -74,38 +74,24 @@ let nivel = 0;
 //fondo
 let fondoImg;
 
+// Obtener el contenedor del juego
+let botonContainer = document.getElementById("botonContainer");
+
 //* === Crear botón de inicio ===
 let botonInicio = document.createElement("button");
 botonInicio.textContent = "Iniciar Juego";
-botonInicio.style.position = "absolute";
-botonInicio.style.top = "80%";
-botonInicio.style.left = "86%";
-botonInicio.style.transform = "translate(-50%, -50%)";
-botonInicio.style.padding = "15px 30px";
-botonInicio.style.fontSize = "20px";
-botonInicio.style.backgroundColor = "#228B22";
-botonInicio.style.color = "white";
-botonInicio.style.border = "none";
-botonInicio.style.borderRadius = "10px";
-botonInicio.style.cursor = "pointer";
+botonInicio.classList.add("iniciar");
 document.body.appendChild(botonInicio);
 
 // === Botón de reinicio ===
 let botonReiniciar = document.createElement("button");
 botonReiniciar.textContent = "Reiniciar Juego";
-botonReiniciar.style.position = "absolute";
-botonReiniciar.style.top = "80%";
-botonReiniciar.style.left = "86%";
-botonReiniciar.style.transform = "translate(-50%, -50%)";
-botonReiniciar.style.padding = "10px 25px";
-botonReiniciar.style.fontSize = "20px";
-botonReiniciar.style.backgroundColor = "#8B0000";
-botonReiniciar.style.color = "white";
-botonReiniciar.style.border = "none";
-botonReiniciar.style.borderRadius = "10px";
-botonReiniciar.style.cursor = "pointer";
-botonReiniciar.style.display = "none";
+botonReiniciar.classList.add("reiniciar");
 document.body.appendChild(botonReiniciar);
+
+// Agregar botones al contenedor del canvas
+botonContainer.appendChild(botonInicio);
+botonContainer.appendChild(botonReiniciar);
 
 
 //**(Carga del canvas y dibujo de la nave)Funcion que nos permite dibujar en el canvas *esto es similar a crear ventana en python//
@@ -132,10 +118,13 @@ window.onload = function() {
         botonInicio.onclick = function () {
             Start = true;
             botonInicio.style.display = "none";
+            botonReiniciar.style.display = "none";
         };
         // solo inicializamos el bucle, el dibujo se hace en `update`
         requestAnimationFrame(update);
     }
+    botonInicio.style.display = "block";
+    botonReiniciar.style.display = "none";
 
     alienImg = new Image();
     alienImg.src = "/PuduGame/puduasset1.png"
@@ -184,7 +173,7 @@ function update() {
     if (gameOver) {
         context.fillStyle = "red";
         context.font = "30px impact";
-        context.fillText("GAME OVER", canvasWidth / 2 - 40, canvasHeight / 2);
+        context.fillText("GAME OVER", canvasWidth / 2 - 65, canvasHeight / 2);
         botonReiniciar.style.display = "block";
         return;
     }

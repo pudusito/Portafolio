@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sr Pudu Porfatolio</title>
     <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/PuduGame/Puduevade.css">
 
 </head>
 <body>
-    <header>
+    <header class="topbar">
         <nav>
             <ul>
                 <li><a href="#ct">Inicio</a></li>
@@ -20,21 +19,23 @@
             </ul>
         </nav>
     </header>
+    <div id = "container1">
 
-        <img src="/Imagenes/puduasset1.png" alt="Pudu" id="Pudu" width="200px" class="Pudu"/>
+        <img src="/Imagenes/puduasset1.png" alt="Pudu" id="Pudu" height="300px" width="300px" class="Pudu"/>
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="boxchat" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" id="boxchatimg" viewBox="0 0 16 16">
         <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
         </svg>
-
-        <textarea name="textarea1" id="textarea1">Hola!
-Soy estudiante de programación!</textarea>
+        <textarea id="textopudu" readonly rows="30" cols="30">Hola! Soy - PUDU. el ciervo más pequeño del mundo, símbolo de humildad, resiliencia y conexión con la naturaleza.
+        </textarea>
+    </div>
 
     <br>
-    <div class="pudugamediv">
+
+    <div id="gameContainer">
         <h1> <img src="/PuduGame/titulo.png" ></h1>
         <canvas id="canvas"></canvas><!--ahora board es un objeto DOM tipo <canvas>.-->
-        <p>esquiva al pudu!</p>
+        <p id="botonContainer">esquiva al pudu!</p>
     </div>
     
 <script src="/PuduGame/Puduevade.js"></script>
