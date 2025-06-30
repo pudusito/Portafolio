@@ -8,8 +8,7 @@ body {
 
   margin: 0;
   padding: 2em; /* padding para el borde */
-  height: 100dvh; /* moderno */
-  min-height: 100vh; /* fallback */
+
 
   font-family: Arial, sans-serif;
   color: rgb(0, 0, 0);
@@ -49,7 +48,7 @@ body {
 #container1 {
   position: fixed;
   /*border: 1px solid red; */
-  bottom:50px;
+  bottom:0px;
   left:330px;
   margin:1em;
   padding: min(5em , 8%);
@@ -59,8 +58,8 @@ body {
 
 #Pudu {
   position: absolute;
-  top: 65%;
-  right: 32%;
+  top: 66%;
+  right: 34%;
   transform: translate(-50%, -20%) scaleX(-1);
   z-index: 10; /* Asegura que esté por encima del canvas */
  /* border: 1px solid yellow;*/
@@ -90,6 +89,16 @@ body {
 }
 
 
+
+/*fuego*/
+#fuego {
+    position: absolute;
+    bottom: -215px;
+    left:49%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+}
 
 
 /*pudu evade game*/
@@ -176,6 +185,7 @@ h1 img{
   z-index: 10;
   display: none;
 }
+
 
 
 
